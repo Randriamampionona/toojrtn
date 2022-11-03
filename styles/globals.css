@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	*,
+	*::after,
+	*::before {
+		@apply p-0 m-0 box-border scroll-smooth;
+	}
+
+	body {
+		@apply bg-bgColor dark:bg-bgColor_dark font-localPoppins;
+	}
+
+	li {
+		@apply text-darkColor;
+	}
+
+	a {
+		@apply text-darkColor hover:text-primaryColor;
+	}
+
+	h1 {
+		@apply dark:text-darkColor_dark text-darkColor font-bold text-2xl sm:text-[2rem] leading-normal;
+	}
+
+	h2 {
+		@apply dark:text-darkColor_dark text-darkColor font-bold text-xl;
+	}
+
+	h3 {
+		@apply dark:text-darkColor_dark text-darkColor font-semibold;
+	}
+
+	p {
+		@apply dark:text-lightDarkColor_dark text-lightDarkColor text-base;
+	}
+
+	span {
+		@apply dark:text-lightDarkColor_dark text-lightDarkColor text-base;
+	}
+
+	small {
+		@apply dark:text-lightDarkColor_dark text-lightDarkColor text-xs;
+	}
+}
+
+@layer components {
+	.mySection {
+		@apply dark:bg-bgColor_dark flex flex-col items-center justify-start min-h-min w-full md:justify-center py-20 lg:min-h-customHeightScreen;
+	}
+
+	.myContainer {
+		@apply w-[90%] sm:max-w-[35.9375em] md:max-w-[43.125em] lg:max-w-[53.75em] xl:max-w-[67.1875em] 2xl:max-w-[77.8125em] h-full mx-auto;
+	}
+
+	.logoAfter {
+		@apply after:w-6 after:h-6 after:rounded-full after:border-b-4 after:border-primaryColor after:bottom-[-0.55rem] sm:after:bottom-[-0.3rem] after:right-[15%] sm:after:right-[20%] after:absolute after:hidden after:transition-all ease-in-out;
+	}
+
+	.navLinkAfter {
+		@apply hover:after:w-[95%] after:w-0 after:h-[0.15rem] after:bg-primaryColor after:rounded-md after:bottom-[-30%] after:left-1/2 after:-translate-x-1/2 after:absolute after:transition-all;
+	}
+
+	.mobileMenuBefore {
+		@apply before:w-3 before:h-3 before:bg-whiteColor dark:before:bg-lightDarkColor before:absolute before:top-[-0.4rem] before:right-[0.55rem] before:rotate-45 before:z-[1] before:border before:border-[#2829292b] before:border-b-0 before:border-r-0 before:rounded-sm;
+	}
+
+	.btn {
+		@apply flex items-center justify-center space-x-2 bg-primaryColor px-6 py-3 sm:px-8 rounded-[4px] active:scale-[0.95] active:opacity-80 hover:opacity-80 origin-center;
+	}
+
+	.inputWrapper {
+		@apply flex flex-col space-y-[0.15rem];
+	}
+
+	.inputForm {
+		@apply bg-whiteColor outline-none w-full p-3 rounded border border-[#2829292b] focus-within:border-primaryColor focus-within:shadow-md;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 0.77rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsla(200, 2%, 30%, 0.329);
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 3px var(--dark-color);
+	border: 3px solid #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 3px var(--dark-color);
+	border: 3px solid #ffffff;
+	background: hsl(200, 2%, 30%);
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+/* swiper overwrite root */
+:root {
+	--swiper-theme-color: hsl(206, 87%, 42%) !important;
+}
+
+.dark {
+	--swiper-theme-color: hsl(200, 2%, 35%) !important;
+}
+
+@media (max-width: 1024px) {
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: none !important;
+	}
+}

@@ -13,7 +13,7 @@ const Intro = () => {
 			variants={variants.container}
 			initial="initial"
 			whileInView="whileInView"
-			className="relative w-full min-h-customHeightScreen mySection">
+			className="relative w-full min-h-customHeightScreen mySection overflow-x-hidden">
 			<div className="myContainer flex flex-col gap-6 sm:flex-row sm:items-center">
 				{/* text */}
 				<div className="max-w-full w-full h-full flex flex-col items-start justify-start pt-20 md:max-w-[50%] md:pt-0">

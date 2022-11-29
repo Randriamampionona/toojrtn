@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { FiChevronUp } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import variants from "./motion";
+import { useRouter } from "next/router";
 
 const ScrollToTop = () => {
+	const { push } = useRouter();
 	const [show, setShow] = useState(false);
 
 	useEffect(() => {
@@ -20,6 +22,8 @@ const ScrollToTop = () => {
 				behavior: "smooth",
 				block: "start",
 			});
+
+		push("/");
 	};
 
 	return (

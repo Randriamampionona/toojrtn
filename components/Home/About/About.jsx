@@ -28,7 +28,7 @@ const About = () => {
 				</div>
 
 				<div className="flex flex-col items-center justify-center sm:w-1/2 sm:items-start sm:justify-start">
-					<h2 className="mb-2">Who the fuck Am I ?</h2>
+					<h2 className="mb-2">Who Am I ?</h2>
 					<p className="text-center sm:text-left">
 						Lorem ipsum dolor sit amet consectetur, adipisicing
 						elit. Libero id quod quae accusamus, ratione odit rerum

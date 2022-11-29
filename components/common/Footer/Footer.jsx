@@ -36,14 +36,15 @@ const Footer = () => {
 
 				{/* social media */}
 				<div className="flex items-center justify-center space-x-4 w-full lg:lg:w-1/3">
-					{socialMedaIcons.map(({ slug, Icon }) => (
+					{socialMedaIcons.map(({ slug, Icon, text }) => (
 						<a
-							className="text-[1.1rem] bg-[#2829290e] dark:bg-[#8991910e] hover:bg-[#0e77c813] dark:hover:bg-[#89919127] rounded-full p-3 dark:text-lightDarkColor_dark text-lightDarkColor"
+							className="flex items-center gap-x-2 text-[1.1rem] bg-[#28292917] dark:bg-[#8991911c] hover:bg-[#0e78c826] dark:hover:bg-[#89919146] rounded-full px-3 py-2 dark:text-lightDarkColor_dark text-lightDarkColor"
 							key={slug}
 							href={slug}
 							target="_blank"
 							rel="noreferrer">
-							{Icon}
+							<span>{Icon}</span>
+							<span>{text}</span>
 						</a>
 					))}
 				</div>

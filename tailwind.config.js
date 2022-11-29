@@ -11,6 +11,7 @@ module.exports = {
 				// nornaml mode
 				bgColor: "hsl(0, 0%, 100%)",
 				primaryColor: "hsl(206, 87%, 42%)",
+				secondaryColor: "hsl(40deg 87% 61%)",
 				whiteColor: "hsl(0, 0%, 99%)",
 				darkColor: "hsl(210deg 1% 16%)",
 				lightDarkColor: "hsl(200, 2%, 30%)",

@@ -1,10 +1,9 @@
 import { createContext, useContext, useReducer } from "react";
-import { hasCookie, getCookie } from "cookies-next";
+import { getCookie } from "cookies-next";
 import { reducer } from "../reducers/reducer";
 import { OPEN_MODAL, CLOSE_MODAL, TOOGLE_THEME } from "./../actions/actions";
 import {
 	RiFacebookFill,
-	RiLinkedinFill,
 	RiGithubFill,
 	RiPaletteFill,
 	RiServerFill,
@@ -13,7 +12,7 @@ import {
 
 const initState = {
 	isModalOpen: false,
-	isDark: false,
+	isDark: true,
 };
 
 const initializer = () => {
@@ -84,14 +83,12 @@ export const PortfolioProvider = ({ children }) => {
 			{
 				slug: "https://facebook.com",
 				Icon: <RiFacebookFill />,
-			},
-			{
-				slug: "https://linkedin.com",
-				Icon: <RiLinkedinFill />,
+				text: "facebook",
 			},
 			{
 				slug: "https://github.com",
 				Icon: <RiGithubFill />,
+				text: "github",
 			},
 		],
 

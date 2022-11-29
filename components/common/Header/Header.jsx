@@ -6,6 +6,7 @@ import { PortfolioContext } from "../../../store/context/PortfolioContext";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
 import variants from "./motion";
+import Image from "next/image";
 
 const Header = () => {
 	const { navLinks, isDark, toogleTheme } = PortfolioContext();
@@ -22,12 +23,16 @@ const Header = () => {
 	return (
 		<header className="z-50 sticky top-0 flex items-center w-full h-navbarHeight bg-bgColor dark:bg-bgColor_dark shadow-sm dark:shadow-md">
 			<div className="myContainer flex items-center justify-between">
-				<div>
-					<Link href="/" passHref>
-						<h1 className="relative cursor-pointer hover:after:block transition-all ease-in-out logoAfter">
-							Tojo
-						</h1>
-					</Link>
+				<div className="relative w-12 h-12 rounded-full overflow-hidden cursor-pointer hover:opacity-90">
+					<Image
+						src="/assets/me-with-blob.png"
+						alt="toojrtn"
+						layout="fill"
+						objectFit="cover"
+						placeholder="blur"
+						blurDataURL="/assets/me-with-blob.png"
+						onClick={(e) => push("/")}
+					/>
 				</div>
 
 				<nav className="hidden md:block">

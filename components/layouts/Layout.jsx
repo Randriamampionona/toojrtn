@@ -13,12 +13,12 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			<Head>
-				<title>WTF is that Guy</title>
+				<title>toojrtn</title>
 				<meta
 					name="description"
-					content="Who The Fuck Is That Guy, ToohRtn Portfolio"
+					content="The good place to create your dream project"
 				/>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/assets/me-with-blob.png" />
 			</Head>
 
 			<main className={isDarkModeActive ? "dark" : ""}>

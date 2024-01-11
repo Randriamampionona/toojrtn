@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 
 	useEffect(() => setIsDarkModeActive(isDark), [isDark]);
 
-	return (
+	{/* return (
 		<>
 			<Head>
 				<title>toojrtn</title>
@@ -35,7 +35,9 @@ const Layout = ({ children }) => {
 				<Footer />
 			</main>
 		</>
-	);
+	);*/}
+
+	return <>{children}</>
 };
 
 export default Layout;
